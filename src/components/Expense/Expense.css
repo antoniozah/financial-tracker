@@ -1,0 +1,40 @@
+.expense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--medium-bg);
+  color: #fff;
+}
+
+.expense:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.expense__date {
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: var(--text-color);
+  border-radius: 10px;
+}
+
+.expense__date > span {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+}
+
+.expense__title {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.expense__amount {
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--light-gray);
+  color: var(--light-blue);
+  border-radius: 12px;
+}

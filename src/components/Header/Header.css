@@ -1,0 +1,29 @@
+.header {
+  padding: 15px 0;
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  color: var(--text-color);
+}
+
+.avatar__name {
+  display: inline-block;
+  font-weight: 600;
+}

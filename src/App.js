@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import ExpenseForm from './components/ExpenseForm/ExpenseForm';
+import Expenses from './components/Expenses/Expenses';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Container from './components/Layout/Container';
+import Section from './components/Layout/Section';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div className='app'>
+      <Header />
+      <Section className="app__content">
+        <Container className="container">
+          <ExpenseForm />
+          <Expenses />
+        </Container>
+      </Section>
+      <Footer />
+  </div>;
 }
 
 export default App;
