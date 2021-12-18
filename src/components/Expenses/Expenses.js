@@ -1,14 +1,14 @@
-import Expense from "../Expense/Expense"
-import "./Expenses.css";
+import Expense from '../Expense/Expense';
+import './Expenses.css';
 
-const Expenses = () => {
+const Expenses = ({ expenseData }) => {
   return (
-    <div className="expenses">
-      <Expense />
-      <Expense />
-      <Expense />
+    <div className='expenses'>
+      {expenseData.map((expense) => (
+        <Expense expense={expense} key={expense.id} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Expenses
+export default Expenses;

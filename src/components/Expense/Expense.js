@@ -1,17 +1,23 @@
 import './Expense.css';
 
-const Expense = () => {
-  return (
-    <div className="expense box-style">
-      <div className="expense__date">
-        <span>March</span>
-        <span>20</span>
-        <span>2021</span>
-      </div>
-      <h3 className="expense__title">Buy milk!</h3>
-      <span className="expense__amount">$55.99</span>
-    </div>
-  )
-}
+const Expense = ({ expense }) => {
+  const day = expense.expenseDate.getDate();
+  const month = expense.expenseDate.toLocaleString('default', {
+    month: 'short',
+  });
+  const year = expense.expenseDate.getFullYear();
 
-export default Expense
+  return (
+    <div className='expense box-style'>
+      <div className='expense__date'>
+        <span>{day}</span>
+        <span>{month}</span>
+        <span>{year}</span>
+      </div>
+      <h3 className='expense__title'>{expense.title}</h3>
+      <span className='expense__amount'>${expense.amount}</span>
+    </div>
+  );
+};
+
+export default Expense;
