@@ -34,6 +34,9 @@ function App() {
     ];
 
     setExpenses(addExpenseData);
+    setTitle('');
+    setAmount('');
+    setExpenseDate('');
   };
 
   const titleHandler = (event) => {
