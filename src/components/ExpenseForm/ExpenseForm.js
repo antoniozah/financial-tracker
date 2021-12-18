@@ -1,6 +1,6 @@
 import './ExpenseForm.css';
 
-const ExpenseForm = (props) => {
+const ExpenseForm = ({data}) => {
   const {
     onSubmitHandler,
     onChangeTitle,
@@ -9,7 +9,7 @@ const ExpenseForm = (props) => {
     title,
     amount,
     expenseDate,
-  } = props.data;
+  } = data;
 
   return (
     <form className='form box-style' onSubmit={onSubmitHandler}>
