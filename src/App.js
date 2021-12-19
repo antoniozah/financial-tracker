@@ -8,69 +8,36 @@ import Section from './components/Layout/Section';
 import NewExpense from './components/NewExpense/NewExpense';
 import './App.css';
 
-function App() {
-  const [title, setTitle] = useState('');
-  const [amount, setAmount] = useState('');
-  const [expenseDate, setExpenseDate] = useState('');
-  const [expenses, setExpenses] = useState([
+const DUMMY_DATA = [
     {
-      id: nanoid(),
-      title: 'Buy Milk!',
-      amount: '2.99',
-      expenseDate: new Date(),
-    },
-  ]);
-
-  const submitHandler = (event) => {
-    event.preventDefault();
-    const addExpenseData = [
-      ...expenses,
-      {
         id: nanoid(),
-        title,
-        amount,
-        expenseDate: new Date(expenseDate),
-      },
-    ];
+        title: 'Buy Milk!',
+        amount: '2.99',
+        expenseDate: new Date(),
+    },
+];
 
-    setExpenses(addExpenseData);
-    setTitle('');
-    setAmount('');
-    setExpenseDate('');
-  };
+function App() {
+    const [expenses, setExpenses] = useState(DUMMY_DATA);
 
-  const titleHandler = (event) => {
-    setTitle(event.target.value);
-  };
+    const addNewExpenses = (newExpenseData) => {
+        setExpenses((prevExpenses) => {
+            return [newExpenseData, ...prevExpenses];
+        });
+    };
 
-  const amountHandler = (event) => {
-    setAmount(event.target.value);
-  };
-
-  const dateHandler = (event) => {
-    setExpenseDate(event.target.value);
-  };
-
-  return (
-    <div className='app'>
-      <Header />
-      <Section className='app__content'>
-        <Container className='container'>
-          <NewExpense
-            onSubmitHandler={submitHandler}
-            onChangeTitle={titleHandler}
-            title={title}
-            onChangeAmount={amountHandler}
-            amount={amount}
-            onChangeDate={dateHandler}
-            expenseDate={expenseDate}
-          />
-          <Expenses expenseData={expenses} />
-        </Container>
-      </Section>
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="app">
+            <Header />
+            <Section className="app__content">
+                <Container className="container">
+                    <NewExpense onAddNewExpenses={addNewExpenses} />
+                    <Expenses expenseData={expenses} />
+                </Container>
+            </Section>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
