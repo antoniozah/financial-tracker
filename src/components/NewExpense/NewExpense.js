@@ -20,13 +20,19 @@ const NewExpense = (props) => {
     };
     return (
         <>
-            <button
-                className="btn btn-with-icon"
-                onClick={changeFormVisibility}
-            >
-                <img src={expenseIcon} className="bounce" alt="expense icon" />
-                <span>Add new Expense</span>
-            </button>
+            {!formIsOpened && (
+                <button
+                    className="btn btn-with-icon"
+                    onClick={changeFormVisibility}
+                >
+                    <img
+                        src={expenseIcon}
+                        className="bounce"
+                        alt="expense icon"
+                    />
+                    <span>Add new Expense</span>
+                </button>
+            )}
             {formIsOpened && (
                 <ExpenseForm
                     onSaveNewExpense={saveNewExpenseHandler}
