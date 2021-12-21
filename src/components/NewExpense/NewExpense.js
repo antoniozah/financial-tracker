@@ -13,6 +13,7 @@ const NewExpense = (props) => {
             id: nanoid(),
         };
         props.onAddNewExpenses(expenseData);
+        setFormIsOpened(false);
     };
 
     const changeFormVisibility = () => {
