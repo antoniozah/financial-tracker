@@ -1,8 +1,5 @@
-# Getting Started with Create React App
+# financial-tracker(IN PROGRESS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-# financial-tracker
 This project is a financial tracker for our personals expenses.
 
 ## Available Scripts
