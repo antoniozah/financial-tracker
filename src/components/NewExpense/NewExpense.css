@@ -1,0 +1,44 @@
+.btn-with-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px -1px rgb(0, 0, 0, 0.3);
+}
+
+.btn-with-icon:hover > img {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.btn-with-icon > span {
+    margin-left: 10px;
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+        transform: scale(0.9, 1.1) translateY(-4px);
+    }
+    50% {
+        transform: scale(1.05, 0.95) translateY(0);
+    }
+    57% {
+        transform: scale(1, 1) translateY(-7px);
+    }
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}

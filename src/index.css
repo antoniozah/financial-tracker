@@ -5,6 +5,7 @@
     --light-bg: rgb(242, 242, 242);
     --dark-bg: rgb(46, 46, 46);
     --medium-bg: rgb(89, 89, 89);
+    --red: rgb(217, 83, 79);
 }
 
 * {
@@ -92,7 +93,17 @@ select {
     color: #fff;
 }
 
+.btn--red {
+    border: 1px solid var(--red);
+    background-color: var(--red);
+    color: #fff;
+}
+
 .btn--blue:hover {
     background-color: #fff;
     color: var(--light-blue);
+}
+
+.highlight-text {
+    font-weight: 700;
 }
