@@ -52,6 +52,21 @@ ul {
     padding: 0;
 }
 
+select {
+    appearance: none;
+    padding: 8px 24px;
+    margin: 0;
+    border: 2px solid var(--dark-bg);
+    outline: 0;
+    border-radius: 6px;
+    background-color: var(--medium-bg);
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+}
+
 .box-style {
     max-width: 1050px;
     margin: 0 auto;
